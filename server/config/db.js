@@ -1,4 +1,4 @@
 module.exports=
 {
-    "URI":"mongodb://localhost/Notes"
+    "URI":"mongodb+srv://DevThakkar:mongodb123@mongodbserver.5dyiwer.mongodb.net/Notes"
 }
