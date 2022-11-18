@@ -1,0 +1,28 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/navigation.ejs %>
+
+  <main>
+  <div class="container">
+    <h1><%= title %> </h1>
+    <h3>Add your Notes Here</h3>
+    <a href="/notes/add" class="btn btn-dark" role="button">
+      <i class="fa-solid fa-file-circle-plus"></i> Add a Note
+    </a>
+    <br><br>
+    <p>Here are some ready made notes if you want to read. The best part is you can use CRUD operation here</p>
+    <% for(let count=0; count < Noteslist.length; count++){ %>
+    <div class="card text-dark text-center bg-warning mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= Noteslist[count].title %></h5>
+    <p class="card-text"><%= Noteslist[count].list %></p>
+    <a href="/notes/edit/<%= Noteslist[count]._id %>" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+    <a href="/notes/delete/<%= Noteslist[count]._id %>" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</a>  
+  </div>
+</div>
+<% } %>
+    </div>
+    </main>
+    <%- include ../partials/footer.ejs %>
+  <%- include ../partials/scripts.ejs %>
+  </body>
+</html>

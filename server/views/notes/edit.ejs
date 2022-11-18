@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" />
+<!--Content for Editing a note-->
+<div class="container">
+<h1>Add your Notes below</h1>
+    <div class="card text-dark text-center bg-warning mb-3" style="width: 18rem;">
+        <div class="card-body">
+            <form class="form" method="post">
+                <div class="for-group">
+                    <label for="titleTextField">Title</label>
+                    <input type="text" class="form-control"
+                    id="titleTextField" 
+                    placeholder="Enter your Notes title"
+                    name="title"
+                    value="<%= store.title %>"
+                    >
+                    
+                </div>
+
+
+        <div class="card-body">
+        <form class="form" method="post">
+        <div class="for-group">
+        <label for="listTextField">Notes</label>
+        <textarea type="text" class="form-control"
+        id="listTextField" 
+        placeholder="Enter your Note"
+        name="list" required>
+        <%= store.list %>
+        </textarea>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-dark"><i class="fa-solid fa-check"></i> Submit</button>
+
+        <a href="/notes" class="btn btn-secondary"><i class="fa-solid fa-xmark"></i> Cancel</a>
+
+    </div>
+</div>
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/jquery/dist/jquery.min"></script>
